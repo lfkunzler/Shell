@@ -283,6 +283,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
     :x salvar e sair
     :q sair
     :q! sair ignorando alterações
+    ![vim table](https://github.com/lfkunzler/Shell/blob/main/01_revisao/vi-help-sheet-01-large2.jpg)
 
 ## File Globbing:
 -   File Globbing é a forma que o bash/shell tem de selecionar arquivos e direts
