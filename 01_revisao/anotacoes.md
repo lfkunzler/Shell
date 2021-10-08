@@ -147,7 +147,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
     mostre a localização de cada arquivo
 
 ## date
-- + na frente do primeiro formatador
+- '+' na frente do primeiro formatador
 - %D data
 - %H hora 00~23
 - %I hora 01~12
@@ -162,7 +162,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 
 ## expr
 > expressoes matematicas (inteiras): + - / * %, logicas...
-  lembrar de proteger o * com: \*
+  lembrar de proteger o * com: \\*
 
 ## bc
 > interpretador de strings no formato de expressao matematica
@@ -170,7 +170,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 
 ## Sequenciamento de comandos
 - `;` executa multiplos comandos, independentemente da saida do processo passado
-- && executa o próximo comando apenas se o anterior tiver sido valido
+- `&&` executa o próximo comando apenas se o anterior tiver sido valido
 - || executa o próximo comando apenas se o anterior tiver retornado erro
     () os comandos dentro de () fazem com que se abra um shell filho, execute e
         retorne para o estado inicial. Por exemplo: (cd .. ; ls -l): abre um 
