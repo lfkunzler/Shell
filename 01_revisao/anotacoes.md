@@ -35,9 +35,10 @@ cat
 tac	faz igual o cat, porem de tras pra frente
 
 tail
+`
 	mostra as ultimas 10 linhas
 	-n define a quantidade de linhas
-	
+	`
 head
 	mostra as primeiras 10 linhas
 	-n define a quantidade de linhas
