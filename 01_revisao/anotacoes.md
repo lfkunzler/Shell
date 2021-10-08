@@ -108,50 +108,53 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 - -B[n] mostra n linhas antes do termo buscado
 
 ## fgrep
-    nao usa expressões regulares (eh o mais leve)
+> nao usa expressões regulares (eh o mais leve)
 
-egrep
-    expressões regulares extendidas
+## egrep
+> expressões regulares extendidas
 
-sed filtering and transforming text
-    similar ao grep, mas realiza operacoes. Exemplos:
-    deletar primeira a terceira linha: sed '1,3 d' file.txt
-    deletar a linha que possui "Rafael": sed '/Rafael/d' file.txt
-    substituir "Paulo" por "João": cat file.txt | sed 's/Paulo/João'
-    substituir linux por unix uma vez:
-        echo "curso linux shell script linux" | sed 's/Linux/Unix'
-    substituir todas as ocorrências:
-        echo "curso linux shell script linux" | sed 's/Linux/Unix/g'
+## sed 
+> Filtering and transforming text. Similar ao grep, mas realiza operacoes.
+    Exemplos:
+    - deletar primeira a terceira linha: `sed '1,3 d' file.txt`
+    - deletar a linha que possui "Rafael": `sed '/Rafael/d' file.txt`
+    - substituir "Paulo" por "João": `cat file.txt | sed 's/Paulo/João'`
+    - substituir linux por unix uma vez:
+        `echo "curso linux shell script linux" | sed 's/Linux/Unix'`
+    - substituir todas as ocorrências:
+        `echo "curso linux shell script linux" | sed 's/Linux/Unix/g'`
 
-more <file>
-    enter desce
-    space proxima pagina
+## more <file>
+-    enter desce
+-    space proxima pagina
 
-less <file>
-    enter desce uma linha
-    space desce uma pagina
-    usar setas direcionais
-    /termo para pesquisar do ponto ao fim (n proximo, N anterior)
-    ?termo para pesquisar do ponto ao comeco
-    
-find <destino> -name <pelo que procurar>
-    usado para procurar arquivos e diretórios
+## less <file>
+-    enter desce uma linha
+-    space desce uma pagina
+-    usar setas direcionais
+-    /termo para pesquisar do ponto ao fim (n proximo, N anterior)
+-    ?termo para pesquisar do ponto ao comeco
+
+## find <destino> -name <pelo que procurar>
+>   usado para procurar arquivos e diretórios
     -user <name> procurar por arquivos do usuario
 
-find + exec
-    find ~/ -name alunos* -exec ls -l {} \;
-    Explicação: executa o comando find a partir da raiz do usuario atual
+## find + exec
+    `find ~/ -name alunos* -exec ls -l {} \;`
+>   Explicação: executa o comando find a partir da raiz do usuario atual
     procurando por todos os arquivos cujo nome começa com a palavra
     "aluno". Após, joga a saida do comando para o ls -l, para que ele
     mostre a localização de cada arquivo
 
-date
-    +
-    %D data
-    %H hora 00~23
-    %I hora 01~12
-    %M minuto
+## date
+    \+ na frente do primeiro formatador
+    - %D data
+    - %H hora 00~23
+    - %I hora 01~12
+    - %M minuto
+    Exemplo: `HORA=$(date +%H:%M:%S)`
     
+
 seq 
     gera uma sequencia de numeros
     um argumento: 0 fim
