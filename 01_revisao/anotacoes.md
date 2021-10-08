@@ -297,7 +297,7 @@ File Globbing:
         {} lista de palavras/expressoes que eu quero
     funciona com diversos comandos que manipulam nome de arquivo
 
-Expressões Regulares (REGEX): aplicados a conteudo...
+Expressões Regulares (REGEX): aplicados a conteudo...:
     egrep: grep que aceita expressões regulares extendidas (grep -e)
     egrep "Linux" texto.txt # busca ocorrencias de Linux no texto
     egrep "[Ll]inux" texto.txt # busca ocorrencias de Linux e linux no texto
@@ -309,7 +309,7 @@ Expressões Regulares (REGEX): aplicados a conteudo...
     egrep "Linux$" texto.txt # apenas quando Linux estiver no final da linha
     egrep -v "^$" texto.txt # apenas linhas em branco (nada entre inicio e fim)
 
-    caracteres especiais...
+    caracteres especiais...:
     * indica que o caractere anterior pode aparecer ou nao...
     egrep b[aeiou]g* texto.txt # baseado, bag, beg, big, beginner, bigger, bage
     + indica que o caractere anterior tem que aparecer pelo menos uma vez
