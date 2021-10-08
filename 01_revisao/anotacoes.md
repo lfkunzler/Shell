@@ -162,7 +162,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 
 ## expr
 > expressoes matematicas (inteiras): + - / * %, logicas...
-  lembrar de proteger o * com: '\'
+  lembrar de proteger o * com: '\\'
 
 ## bc
 > interpretador de strings no formato de expressao matematica
