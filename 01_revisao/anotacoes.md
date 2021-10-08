@@ -27,22 +27,22 @@ rm
 	-f serve para suprimir a mensagem de erro, alem de forcar algo...
 
 cat
-	joga pra uma saida (geralmente a padrao) o conteudo de um arquivo
-	-b enumera as linhas que nao sao em branco
-	-n enumera todas as linhas
-	-A mostra caracteres especiais
+`joga pra uma saida (geralmente a padrao) o conteudo de um arquivo`
+-   -b enumera as linhas que nao sao em branco
+-   -n enumera todas as linhas
+-   -A mostra caracteres especiais
 
-tac	faz igual o cat, porem de tras pra frente
+## tac
+> faz igual o cat, porem de tras pra frente
 
-tail
-`
-- mostra as ultimas 10 linhas
+## tail
+> mostra as ultimas 10 linhas
 - -n define a quantidade de linhas
-`
+
 head
-	mostra as primeiras 10 linhas
-	-n define a quantidade de linhas
-	-c quantidade de caracteres
+`mostra as primeiras 10 linhas`
+-   -n define a quantidade de linhas
+-   -c quantidade de caracteres
 
 wc
 	conta quantidade de [linhas, palavras, caracteres(bytes)]
