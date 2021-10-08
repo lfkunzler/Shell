@@ -264,26 +264,26 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 
 ## Ajudas do VI
 ### Comandos basicos do vim
-ctrl+f proxima pagina
-ctrl+p pagina anterior
-sair dos modos: esc
-modo insert: i
-modo de comando: :
-:1 primeira linha
-:$ ultima linha
-:20 linha 20
-:! minimiza o vim, executa o comando no bash e retorna...
+- ctrl+f proxima pagina
+- ctrl+p pagina anterior
+- sair dos modos: esc
+- modo insert: i
+- modo de comando: :
+- :1 primeira linha
+- :$ ultima linha
+- :20 linha 20
+- :! minimiza o vim, executa o comando no bash e retorna...
 > :! ls /tmp => minimiza o vim, lista o /tmp e volta pro vim
-/Linux procura de cima para baixo por Linux (n e N proximo e anterior)
-?Linux procura de baixo para cima por Linux
-dd: recortar uma linha
-d<n>d: recorta n linhas
-p: colar na linha seguinte
-yy e y<n>y: copiar linhas
-:w salvar
-:x salvar e sair
-:q sair
-:q! sair ignorando alterações
+- /Linux procura de cima para baixo por Linux (n e N proximo e anterior)
+- ?Linux procura de baixo para cima por Linux
+- dd: recortar uma linha
+- d<n>d: recorta n linhas
+- p: colar na linha seguinte
+- yy e y<n>y: copiar linhas
+- :w salvar
+- :x salvar e sair
+- :q sair
+- :q! sair ignorando alterações
 
 ![vim table](https://github.com/lfkunzler/Shell/blob/main/01_revisao/vi-help-sheet-01-large2.jpg)
 
