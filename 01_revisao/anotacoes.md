@@ -1,5 +1,5 @@
 Descompactar arquivos do curso
-    tar zxvf arquivos.tgz
+    'tar zxvf arquivos.tgz'
 
 Tipos de Shell
 Bourne Shell (SH)
