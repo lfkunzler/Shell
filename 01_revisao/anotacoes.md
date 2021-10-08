@@ -234,12 +234,12 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
     criar e exportar a variavel ao mesmo tempo: export VAR1=content
 
 ## Caracteres especiais
-    * qualquer coisa
-    / protecao do caractere seguinte
-    $ 
-    ``
-    "" protecao de tudo menos $ ` \
-    '' protecao de tudo
+`*` qualquer coisa
+`/` protecao do caractere seguinte
+`$` 
+`'``'`
+`"` protecao de tudo menos $ '`' \
+`''` protecao de tudo
 
 ## BASH manual:
 ### 3.1.2.2 Single Quotes
