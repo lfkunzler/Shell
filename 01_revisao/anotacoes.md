@@ -162,7 +162,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 
 ## expr
 > expressoes matematicas (inteiras): + - / * %, logicas...
-  lembrar de proteger o * com: '\\'
+  lembrar de proteger o * com: \\
 
 ## bc
 > interpretador de strings no formato de expressao matematica
@@ -171,49 +171,49 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 ## Sequenciamento de comandos
 - `;` executa multiplos comandos, independentemente da saida do processo passado
 - `&&` executa o próximo comando apenas se o anterior tiver sido valido
-- || executa o próximo comando apenas se o anterior tiver retornado erro
-    () os comandos dentro de () fazem com que se abra um shell filho, execute e
-        retorne para o estado inicial. Por exemplo: (cd .. ; ls -l): abre um 
+- `||` executa o próximo comando apenas se o anterior tiver retornado erro
+- `()` os comandos dentro de () fazem com que se abra um shell filho, execute e
+        retorne para o estado inicial. Por exemplo: `(cd .. ; ls -l)`: abre um 
         processo filho, desce um nível e imprime o que há nele. Ao final desse
         comando, o shell ainda esta no diretorio atual.
 
-Redirecionamento de Entrada e Saída
-stdin(0) -> program -> stdout(1)
-               |-----> stderr(2)
-    Redirecionamentos de Saida: > e >>
+## Redirecionamento de Entrada e Saída
+`stdin(0)` -> program -> `stdout(1)`
+               |-----> `stderr(2)`
+### Redirecionamentos de Saida: > e >>
         > escreve o conteudo atual em cima dos dados ja existentes
         >> anexa o conteudo atual aos dados já existentes
         pode ser representado tambem por 1> e 1>>, como visto abaixo
-    
-    Redirecionamento de erro:
-        funciona igual ao redirecionamento de saida
-        porem é necessario especificar que o redirecionamento é da saida
-        de erro atraves do numerador: 2> e 2>>
-    
-    mixando:
-        ls -l no_file.txt >> log.out 2>> log_error.out
-        a saida do comando para o log.out e o erro do comando para log_error
 
-    também é possivel redirecionar as duas saidas
-        ls -l no_file.txt >> log.out 2>&1
+### Redirecionamento de erro:
+> funciona igual ao redirecionamento de saida
+  porem é necessario especificar que o redirecionamento é da saida
+  de erro atraves do numerador: 2> e 2>>
 
-    por fim, tambem podemos desprezar a saida de erro, jogando-a no buraco negro
-        ls -l no_file.txt 2> /dev/null
+### Mixando:
+`ls -l no_file.txt >> log.out 2>> log_error.out`
+> a saida do comando para o log.out e o erro do comando para log_error
 
-    Redirecionamento de Entrada: |
-        cat alunos.txt | grep nome
-        cat alunos.txt | tr a-z A-Z
+> também é possivel redirecionar as duas saidas
+  `ls -l no_file.txt >> log.out 2>&1`
 
-Variaveis no Shell
-    declaracao: normalmente se usa maiusculo
-        VARIAVEL1=valor # sem espaco
-    
-    exibição:
-        echo $VARIAVEL1
+> por fim, tambem podemos desprezar a saida de erro, jogando-a no buraco negro
+  `ls -l no_file.txt 2> /dev/null`
 
-    proteção:
-        STRING1="conteudo protegido pelas aspas"
-        sem as aspas, o espaço proíbido
+### Redirecionamento de Entrada: |
+`cat alunos.txt | grep nome`
+`cat alunos.txt | tr a-z A-Z`
+
+## Variaveis no Shell
+> declaracao: normalmente se usa maiusculo
+`VARIAVEL1=valor # sem espaco`
+
+> exibição:
+`echo $VARIAVEL1`
+
+> proteção:
+`STRING1="conteudo protegido pelas aspas"`
+        sem as aspas, o espaço é proíbido
 
     echo $$
         pid da sessão
@@ -233,7 +233,7 @@ Variaveis no Shell
     set : variaveis locais e de ambiente
     criar e exportar a variavel ao mesmo tempo: export VAR1=content
 
-Caracteres especiais
+## Caracteres especiais
     * qualquer coisa
     / protecao do caractere seguinte
     $ 
@@ -241,28 +241,28 @@ Caracteres especiais
     "" protecao de tudo menos $ ` \
     '' protecao de tudo
 
-    BASH manual:
-    3.1.2.2 Single Quotes
+## BASH manual:
+### 3.1.2.2 Single Quotes
 
-    Enclosing characters in single quotes (') preserves the literal value of 
-    each character within the quotes. A single quote may not occur between 
-    single quotes, even when preceded by a backslash.
+> Enclosing characters in single quotes (') preserves the literal value of 
+  each character within the quotes. A single quote may not occur between 
+  single quotes, even when preceded by a backslash.
 
-    3.1.2.3 Double Quotes
+### 3.1.2.3 Double Quotes
 
-    Enclosing characters in double quotes (") preserves the literal value of all
-    characters within the quotes, with the exception of $, `, \, and, when
-    history expansion is enabled, !. The characters $ and ` retain their special
-    meaning within double quotes (see Shell Expansions). The backslash retains 
-    its special meaning only when followed by one of the following characters: 
-    $, `, ", \, or newline. Within double quotes, backslashes that are followed 
-    by one of these characters are removed. Backslashes preceding characters
-    without a special meaning are left unmodified. A double quote may be quoted 
-    within double quotes by preceding it with a backslash. If enabled, history
-    expansion will be performed unless an ! appearing in double quotes is 
-    escaped using a backslash. The backslash preceding the ! is not removed.
+> Enclosing characters in double quotes (") preserves the literal value of all
+  characters within the quotes, with the exception of $, `, \, and, when
+  history expansion is enabled, !. The characters $ and ` retain their special
+  meaning within double quotes (see Shell Expansions). The backslash retains 
+  its special meaning only when followed by one of the following characters: 
+  $, `, ", \, or newline. Within double quotes, backslashes that are followed 
+  by one of these characters are removed. Backslashes preceding characters
+  without a special meaning are left unmodified. A double quote may be quoted 
+  within double quotes by preceding it with a backslash. If enabled, history
+  expansion will be performed unless an ! appearing in double quotes is 
+  escaped using a backslash. The backslash preceding the ! is not removed.
 
-Ajudas do VI
+## Ajudas do VI
     ctrl+f proxima pagina
     ctrl+p pagina anterior
     sair dos modos: esc
@@ -284,7 +284,7 @@ Ajudas do VI
     :q sair
     :q! sair ignorando alterações
 
-File Globbing:
+## File Globbing:
 -   File Globbing é a forma que o bash/shell tem de selecionar arquivos e direts
 -   REGEX é usado para seleção e formatação de texto.
     Exemplo:
@@ -299,7 +299,7 @@ File Globbing:
         {} lista de palavras/expressoes que eu quero
     funciona com diversos comandos que manipulam nome de arquivo
 
-Expressões Regulares (REGEX): aplicados a conteudo...:
+## Expressões Regulares (REGEX): aplicados a conteudo...:
     egrep: grep que aceita expressões regulares extendidas (grep -e)
     egrep "Linux" texto.txt # busca ocorrencias de Linux no texto
     egrep "[Ll]inux" texto.txt # busca ocorrencias de Linux e linux no texto
