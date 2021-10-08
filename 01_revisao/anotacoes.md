@@ -1,33 +1,33 @@
 Descompactar arquivos do curso
     `tar zxvf arquivos.tgz`
 
-Tipos de Shell
-Bourne Shell (SH)
-	shell original e padrão do unix
-Bourne-Again Shell (BASH) (utilizado no curso)
-	shell padrão linux, compativel com SH, porém melhorado.
-	Também incorpora recursos do csh e ksh
-Korn Shell (KSH)
-	shell baseado no BASH, porém melhorado
-C Shell (CSH)
-	shell com recursos da linguagem C
+## Tipos de Shell
+> Bourne Shell (SH)
+- shell original e padrão do unix
+> Bourne-Again Shell (BASH) (utilizado no curso)
+- shell padrão linux, compativel com SH, porém melhorado.
+- Também incorpora recursos do csh e ksh
+> Korn Shell (KSH)
+- shell baseado no BASH, porém melhorado
+> C Shell (CSH)
+- shell com recursos da linguagem C
 
-Para visualizar o shell em uso, utiliza-se os comandos echo $0 ou echo $SHELL
+Para visualizar o shell em uso, utiliza-se os comandos `echo $0` ou `echo $SHELL`
 
-O comando touch serve para atualizar a data de edição de um arquivo
+O comando `touch` serve para atualizar a data de edição de um arquivo
 
-echo
-	direciona um texto para uma saida
-	-n nao quebra a linha no final
-	-e adiciona um "efeito", por exemplo:
-		\a alert, \b backspace, \n newline, \t tab
+## echo
+> direciona um texto para uma saida
+-   -n nao quebra a linha no final
+-   -e adiciona um "efeito", por exemplo:
+-   \a alert, \b backspace, \n newline, \t tab
 
-rm
-	remoção de arquivos (diretorios com -r)
-	-f serve para suprimir a mensagem de erro, alem de forcar algo...
+## rm
+> remoção de arquivos (diretorios com -r)
+-   -f serve para suprimir a mensagem de erro, alem de forcar algo...
 
-cat
-`joga pra uma saida (geralmente a padrao) o conteudo de um arquivo`
+## cat
+> joga pra uma saida (geralmente a padrao) o conteudo de um arquivo
 -   -b enumera as linhas que nao sao em branco
 -   -n enumera todas as linhas
 -   -A mostra caracteres especiais
@@ -39,76 +39,75 @@ cat
 > mostra as ultimas 10 linhas
 - -n define a quantidade de linhas
 
-head
-`mostra as primeiras 10 linhas`
--   -n define a quantidade de linhas
--   -c quantidade de caracteres
+## head
+> mostra as primeiras 10 linhas
+- -n define a quantidade de linhas
+- -c quantidade de caracteres
 
-wc
-	conta quantidade de [linhas, palavras, caracteres(bytes)]
-	-l somente linhas
-	-w somente palavras
-	-c somente caracteres (bytes)
+## wc
+> conta quantidade de [linhas, palavras, caracteres(bytes)]
+- -l somente linhas
+- -w somente palavras
+- -c somente caracteres (bytes)
 
-|
-	(pipe) desvio da saida de um comando para o outro
-	exemplo: echo "ola mundo" | wc
-		1 2 10
+## |
+> (pipe) desvio da saida de um comando para o outro
+- exemplo: `echo "ola mundo" | wc`
+> 1 2 10
 
 
-sort
-	realiza a ordenacao de um arquivo
-	-r ao contrario
-	-k define o campo utilizado, por padrao eh o 1
-	-t para definir o que define os campos
-	-g para que o campo seja interpretado como int (nao como string)
+## sort
+> realiza a ordenacao de um arquivo
+- -r ao contrario
+- -k define o campo utilizado, por padrao eh o 1
+- -t para definir o que define os campos
+- -g para que o campo seja interpretado como int (nao como string)
 
-uniq 
-	nao permite retorno repetido em sequencia
-	-u exibe todos os campos que só aparecem uma vez
-	-d exibe apenas as informacoes repetidas
-	-c conta quantos vezes cada expressao aparece
+## uniq
+> nao permite retorno repetido em sequencia
+- -u exibe todos os campos que só aparecem uma vez
+- -d exibe apenas as informacoes repetidas
+- -c conta quantos vezes cada expressao aparece
 
-misturando alguns comandos:
-	sort alunos.txt | uniq -c | sort -r | head -n 1
-		ordena a saida do txt, exibe a contagem de cada elemento repetido,
-		ordena reversamente para o elemento que aparece mais vezes aparecer
-		por primeiro e por ultimo, exibe apenas a primeira linha
+## misturando alguns comandos:
+> sort alunos.txt | uniq -c | sort -r | head -n 1
+    ordena a saida do txt, exibe a contagem de cada elemento repetido,
+    ordena reversamente para o elemento que aparece mais vezes aparecer
+    por primeiro e por ultimo, exibe apenas a primeira linha
 
-tr
-	muda, traduz e deleta caracteres
-	por exemplo, podemos pegar a saida de um arquivo (cat file.txt) e
+## tr
+> muda, traduz e deleta caracteres
+    por exemplo, podemos pegar a saida de um arquivo (cat file.txt) e
     alterar todos os caracteres para maiusculo com:
-		cat file.txt | tr a-z A-Z
-	para trocar todos os espacos de um arquivos por um tab:
-		cat file.txt | tr ' ' '\t'
-	-d deleta as letras especificadas
+    `cat file.txt | tr a-z A-Z`
+    para trocar todos os espacos de um arquivos por um tab:
+    `cat file.txt | tr ' ' '\t'`
+- -d deleta as letras especificadas
 
-cut
-	-c corta os caracteres especificados. Exemplo:
-		cut -c 1,2,10- : pega os caracteres 1, 2 e 10 em diante em todas linhas
-	-d define o separador de campos
-	-f escolhe quais campos sao utilizados
+## cut
+- -c corta os caracteres especificados. Exemplo:
+> cut -c 1,2,10- : pega os caracteres 1, 2 e 10 em diante em todas linhas
+- -d define o separador de campos
+- -f escolhe quais campos sao utilizados. Exemplo: 
+    `echo "Luis Felipe Kunzler" | cut -d " " -f 1,3`
+> Luis Kunzler
 
-	exemplo: echo "Luis Felipe Kunzler" | cut -d " " -f 1,3
-	>> Luis Kunzler
+## diff
+> compare line by line - mostra as diferencas entre dois arquivos
+- -w ignora se a diferenca for um espaço
+- -r compara pastas
 
-diff 	compare line by line
-	mostra as diferencas entre dois arquivos
-	-w ignora se a diferenca for um espaço
-    -r compara pastas
+## grep
+> procurar um conteudo dentro de um stream de texto
+- -i testa todas possibilidades entre maiusculo e minusculo
+- -c conta a ocorrencia do termo de busca
+- -v nao mostra linhas que possui a palavra
+- -r recursivo (dentro de diretorio: grep -r word \*)
+- -l so lista o arquivo que possui o elemento (combo -rl)
+- -A[n] mostra n linhas depois do termo buscado
+- -B[n] mostra n linhas antes do termo buscado
 
-grep
-    procurar um conteudo dentro de um stream de texto
-    -i testa todas possibilidades entre maiusculo e minusculo
-    -c conta a ocorrencia do termo de busca
-    -v nao mostra linhas que possui a palavra
-    -r recursivo (dentro de diretorio: grep -r word *)
-    -l so lista o arquivo que possui o elemento (combo -rl)
-    -A[n] mostra n linhas depois do termo buscado
-    -B[n] mostra n linhas antes do termo buscado
-
-fgrep
+## fgrep
     nao usa expressões regulares (eh o mais leve)
 
 egrep
