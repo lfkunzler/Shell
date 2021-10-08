@@ -173,9 +173,10 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 - `&&` executa o próximo comando apenas se o anterior tiver sido valido
 - `||` executa o próximo comando apenas se o anterior tiver retornado erro
 - `()` os comandos dentro de () fazem com que se abra um shell filho, execute e
-        retorne para o estado inicial. Por exemplo: `(cd .. ; ls -l)`: abre um 
-        processo filho, desce um nível e imprime o que há nele. Ao final desse
-        comando, o shell ainda esta no diretorio atual.
+        retorne para o estado inicial. 
+> Por exemplo: `(cd .. ; ls -l)`: abre um processo filho, desce um nível e 
+  imprime o que há nele. Ao final desse comando, o shell ainda esta no diretorio
+  atual.
 
 ## Redirecionamento de Entrada e Saída
 `stdin(0)` -> program -> `stdout(1)`
@@ -201,8 +202,8 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
   `ls -l no_file.txt 2> /dev/null`
 
 ### Redirecionamento de Entrada: |
-`cat alunos.txt | grep nome`
-`cat alunos.txt | tr a-z A-Z`
+- `cat alunos.txt | grep nome`
+- `cat alunos.txt | tr a-z A-Z`
 
 ## Variaveis no Shell
 > declaracao: normalmente se usa maiusculo
@@ -216,8 +217,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
         sem as aspas, o espaço é proíbido
 
     echo $$
-        pid da sessão
-
+>   pid da sessão
     variaveis criadas são locais por padrão e nao visivel a outros bash,
     nem processos filhos desse bash
 
