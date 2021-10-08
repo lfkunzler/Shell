@@ -147,12 +147,12 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
     mostre a localização de cada arquivo
 
 ## date
-    + na frente do primeiro formatador
-    - %D data
-    - %H hora 00~23
-    - %I hora 01~12
-    - %M minuto
-    Exemplo: `HORA=$(date +%H:%M:%S)`
++ na frente do primeiro formatador
+- %D data
+- %H hora 00~23
+- %I hora 01~12
+- %M minuto
+Exemplo: `HORA=$(date +%H:%M:%S)`
     
 
 seq 
