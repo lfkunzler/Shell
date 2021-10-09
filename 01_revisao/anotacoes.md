@@ -288,31 +288,31 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 ![vim table](https://github.com/lfkunzler/Shell/blob/main/01_revisao/vi-help-sheet-01-large2.jpg)
 
 ## File Globbing:
--   File Globbing é a forma que o bash/shell tem de selecionar arquivos e direts
--   REGEX é usado para seleção e formatação de texto.
-    Exemplo:
-    ls Aula* : utilização de * em file globbing
-    ls -la Aula[1-5]: quero apenas aula com algum dos caractes dentro de []
-    ls -la *[12]: qualquer coisa que termine com 1 ou 2
-    ls -la {AULA,Aula}[12]: listar apenas Aula e AULA 1 e 2
-    ls -la {AULA,Aula}1?: Exige a existencia de um caractere apos 1
-    Resumo file globbing:
-        ? quantidade de caracteres
-        [] lista de caracteres possiveis que eu quero
-        {} lista de palavras/expressoes que eu quero
-    funciona com diversos comandos que manipulam nome de arquivo
+> File Globbing é a forma que o bash/shell tem de selecionar arquivos e direts
+  REGEX é usado para seleção e formatação de texto.
+> Exemplo:
+- `ls Aula*`: utilização de * em file globbing
+- `ls -la Aula[1-5]`: quero apenas aula com algum dos caractes dentro de []
+- `ls -la *[12]`: qualquer coisa que termine com 1 ou 2
+- `ls -la {AULA,Aula}[12]`: listar apenas Aula e AULA 1 e 2
+- `ls -la {AULA,Aula}1?`: Exige a existencia de um caractere apos 1
+> Resumo file globbing:
+- `?` quantidade de caracteres
+- `[]` lista de caracteres possiveis que eu quero
+- `{}` lista de palavras/expressoes que eu quero
+> funciona com diversos comandos que manipulam nome de arquivo
 
 ## Expressões Regulares (REGEX): aplicados a conteudo...:
-    egrep: grep que aceita expressões regulares extendidas (grep -e)
-    egrep "Linux" texto.txt # busca ocorrencias de Linux no texto
-    egrep "[Ll]inux" texto.txt # busca ocorrencias de Linux e linux no texto
-    egrep "b[aei]g" texto.txt # 1st e 3rd char tem q ser b e g, segundo pode 
+`egrep`: grep que aceita expressões regulares extendidas (grep -e)
+`egrep "Linux" texto.txt` # busca ocorrencias de Linux no texto
+`egrep "[Ll]inux" texto.txt # busca ocorrencias de Linux e linux no texto
+`egrep "b[aei]g" texto.txt` # 1st e 3rd char tem q ser b e g, segundo pode 
         ser qualquer um dentro do colchete
-    egrep "^Linux" texto.txt # a primeira palavra tem que ser Linux
-    egrep "^#" texto.txt # apenas comentarios
-    egrep -v "^#" texto.txt # tudo menos os comentarios
-    egrep "Linux$" texto.txt # apenas quando Linux estiver no final da linha
-    egrep -v "^$" texto.txt # apenas linhas em branco (nada entre inicio e fim)
+`egrep "^Linux" texto.txt` # a primeira palavra tem que ser Linux
+`egrep "^#" texto.txt` # apenas comentarios
+`egrep -v "^#" texto.txt` # tudo menos os comentarios
+`egrep "Linux$" texto.txt` # apenas quando Linux estiver no final da linha
+`egrep -v "^$" texto.txt` # apenas linhas em branco (nada entre inicio e fim)
 
     caracteres especiais...:
     * indica que o caractere anterior pode aparecer ou nao...
