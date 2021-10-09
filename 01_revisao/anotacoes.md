@@ -302,11 +302,12 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 - `{}` lista de palavras/expressoes que eu quero
 > funciona com diversos comandos que manipulam nome de arquivo
 
-## Expressões Regulares (REGEX): aplicados a conteudo...:
+## Expressões Regulares (REGEX): 
+> aplicados a conteudo...:
 ### Utilizações do `egrep`
 - `egrep`: grep que aceita expressões regulares extendidas (grep -e)
 - `egrep "Linux" texto.txt` # busca ocorrencias de Linux no texto
-- `egrep "[Ll]inux" texto.txt # busca ocorrencias de Linux e linux no texto
+- `egrep "[Ll]inux" texto.txt` # busca ocorrencias de Linux e linux no texto
 - `egrep "b[aei]g" texto.txt` # 1st e 3rd char tem q ser b e g, segundo pode 
         ser qualquer um dentro do colchete
 - `egrep "^Linux" texto.txt` # a primeira palavra tem que ser Linux
@@ -316,33 +317,33 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 - `egrep -v "^$" texto.txt` # apenas linhas em branco (nada entre inicio e fim)
 
 ### caracteres especiais...:
-    * indica que o caractere anterior pode aparecer ou nao...
-    egrep b[aeiou]g* texto.txt # baseado, bag, beg, big, beginner, bigger, bage
-    + indica que o caractere anterior tem que aparecer pelo menos uma vez
-    egrep b[aeiou]g+ texto.txt # bag, beg, big, beginner, bigger, bage
-    ? o caracter anterior tem que aparecer nenhuma ou apenas uma vez
-    egrep b[aeiou]g? texto.txt # baseado, bag, beg, big, beginner, bigger, bage
-        nesse caso bigger aparece, porem no terminal o segundo g nao eh destacad
-    . Serve para substituir um caracter, como um coringa
-    egrep "Linux" texto.txt 
-        # Linux 
-        # LinuxUbuntu
-        # Linux Ubuntu
-        # O Linux
-        # OLinux
-    egrep "O.Linux" texto.txt 
-        # O Linux
-    egrep "O.*Linux" texto.txt # pode existir qualquer coisa entre O e Linux
-        # O Sistema Operacional Linux
-        # O Linux
-        # Origem Linux
-        # OLinux
-    Para proteger o . de ser interpretado como REGEX, utiliza-se a \
-    O mesmo serve para outros coringas, como [] {} *
+- `*` indica que o caractere anterior pode aparecer ou nao...
+> `egrep b[aeiou]g* texto.txt` # baseado, bag, beg, big, beginner, bigger, bage
+- `+` indica que o caractere anterior tem que aparecer pelo menos uma vez
+> `egrep b[aeiou]g+ texto.txt` # bag, beg, big, beginner, bigger, bage
+- `?` o caracter anterior tem que aparecer nenhuma ou apenas uma vez
+> `egrep b[aeiou]g? texto.txt` # baseado, bag, beg, big, beginner, bigger, bage
+   nesse caso bigger aparece, porem no terminal o segundo g nao eh destacado.
+- `.` Serve para substituir um caracter, como um coringa
+> `egrep "Linux" texto.txt`
+- # Linux 
+- # LinuxUbuntu
+- # Linux Ubuntu
+- # O Linux
+- # OLinux
+> ` egrep "O.Linux" texto.txt`
+- # O Linux
+> `egrep "O.*Linux" texto.txt # pode existir qualquer coisa entre O e Linux`
+- # O Sistema Operacional Linux
+- # O Linux
+- # Origem Linux
+- # OLinux
+> Para proteger o `.` de ser interpretado como REGEX, utiliza-se a `\`
+- O mesmo serve para outros coringas, como `[] {} *`
 
-    O comando de sed (filtering and transforming text tool) também pode ser
+> O comando de `sed (filtering and transforming text tool)` também pode ser
     utilizado com REGEX:
-    sed 's/[Ll]inux/Unix/g' texto.txt # substitui (s) todas (g) as ocorrencias
+    `sed 's/[Ll]inux/Unix/g' texto.txt` # substitui (s) todas (g) as ocorrencias
     de Linux e linux por Unix
-        
+
 
