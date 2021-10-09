@@ -18,10 +18,10 @@
 ## Comentários - Boas práticas
 - É feito através do caracter `#`
 - Cria-se um cabeçalho:
-`################################################
-`# feijoada.sh - script que faz feijoada
-`# Autor: Luis (kunzler.luis@gmail.com)
-`# Data: 08/10/2021
-`# Descrição: feijoada com linguiça
-`# Exemplo de uso: ./feijoada.sh
-`################################################
+`################################################`
+`# feijoada.sh - script que faz feijoada`
+`# Autor: Luis (kunzler.luis@gmail.com)`
+`# Data: 08/10/2021`
+`# Descrição: feijoada com linguiça`
+`# Exemplo de uso: ./feijoada.sh`
+`################################################`
