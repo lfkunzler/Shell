@@ -346,4 +346,3 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
     `sed 's/[Ll]inux/Unix/g' texto.txt` # substitui (s) todas (g) as ocorrencias
     de Linux e linux por Unix
 
-
