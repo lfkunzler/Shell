@@ -326,18 +326,18 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
    nesse caso bigger aparece, porem no terminal o segundo g nao eh destacado.
 - `.` Serve para substituir um caracter, como um coringa
 > `egrep "Linux" texto.txt`
-- # Linux 
-- # LinuxUbuntu
-- # Linux Ubuntu
-- # O Linux
-- # OLinux
+- Linux 
+- LinuxUbuntu
+- Linux Ubuntu
+- O Linux
+- OLinux
 > ` egrep "O.Linux" texto.txt`
-- # O Linux
+- O Linux
 > `egrep "O.*Linux" texto.txt # pode existir qualquer coisa entre O e Linux`
-- # O Sistema Operacional Linux
-- # O Linux
-- # Origem Linux
-- # OLinux
+- O Sistema Operacional Linux
+- O Linux
+- Origem Linux
+- OLinux
 > Para proteger o `.` de ser interpretado como REGEX, utiliza-se a `\`
 - O mesmo serve para outros coringas, como `[] {} *`
 
