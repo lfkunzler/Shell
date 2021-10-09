@@ -237,7 +237,7 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 - `*` qualquer coisa
 - `/` protecao do caractere seguinte
 - `$` 
-- `\`\\`\`
+- `\`\``
 - `"` protecao de tudo menos $ '`' \
 - `''` protecao de tudo
 
