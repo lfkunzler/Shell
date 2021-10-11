@@ -80,8 +80,8 @@
 - `echo $1 - Imprime o primeiro parâmetro
 ### Exemplo de Uso
 `./ExemploParametros.sh curso shell script linux bash`
-> $# = 5
-> $* = curso shell script linux bash
-> $1 = curso
-> $2 = shell
-> $5 = bash
+- $# = 5
+- $* = curso shell script linux bash
+- $1 = curso
+- $2 = shell
+- $5 = bash
