@@ -27,8 +27,7 @@
 7. `################################################`
 
 ## Trabalhando com variaveis
-`
-1. #!/bin/bash
+`1. #!/bin/bash
 2. #################################################
 3. # PrimeiroScript.sh - Script exemplo do curso
 4. #
@@ -57,6 +56,5 @@
 25. sort $DIRALUNOS"/alunos2.txt"
 26. echo "datahora pra receber segundo"
 27. DATAHORA=$(date +%H:%M:%S)
-28. echo "Hora atual: $DATAHORA"
-`
+28. echo "Hora atual: $DATAHORA"`
 
