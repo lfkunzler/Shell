@@ -28,13 +28,13 @@
 
 ## Trabalhando com variaveis
 ### Exemplos
-`DATAHORA=$(date +%H:%M)`
-`ARQALUNOS="/home/felipe/Udemy/Shell/arquivos/alunos2.txt"`
-`DIRALUNOS="/home/felipe/Udemy/Shell/arquivos"`
-`echo -n "Exibir data e hora atual: $DATAHORA"`
-`DATAHORA=$(date +%H:%M:%S)`
-`echo "Hora atual: $DATAHORA"`
-`sort $DIRALUNOS"/alunos2.txt"`
+1. `DATAHORA=$(date +%H:%M)`
+2. `ARQALUNOS="/home/felipe/Udemy/Shell/arquivos/alunos2.txt"`
+3. `DIRALUNOS="/home/felipe/Udemy/Shell/arquivos"`
+4. `echo -n "Exibir data e hora atual: $DATAHORA"`
+5. `DATAHORA=$(date +%H:%M:%S)`
+6. `echo "Hora atual: $DATAHORA"`
+7. `sort $DIRALUNOS"/alunos2.txt"`
 
 ## Codigos de Retorno (Exit Codes)
 
