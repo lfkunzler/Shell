@@ -37,4 +37,18 @@
 7. `sort $DIRALUNOS"/alunos2.txt"`
 
 ## Codigos de Retorno (Exit Codes)
+> Códigos: 0 = sucesso, 1~255 = erro
+> O código de retorno do comando anterior é obtido pelo $?
+> O man dos comandos apresenta o codigo de retorno.
+### EC: Exit Status para o LS:
+- 0 success
+- 1 minor problems (cannot access subdirs)
+- 2 big problems (cannot access cmd-line argument)
 
+### Scripts:
+- Armazenar retorno de um comando dentro do código:
+`RETURN_CODE=$?`
+- Encerrar a execução do script com o valor de retorno do ultimo comando dentro do script:
+`exit`
+- Encerrar a execução definindo o código de retorno como 10:
+`exit 10`
