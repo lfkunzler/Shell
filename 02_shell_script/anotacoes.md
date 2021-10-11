@@ -72,3 +72,16 @@
 - -a: a variavel é gerada na forma de vetor, iniciando na posicao 0
 - -s: nao ecoa a entrada do terminal
 - -d: define o delimitador que sera utilizado para encerrar a entrada de dados
+
+## Entradas por parâmetros
+- `$0 - Nome do Programa`
+- `$# - Quantidade de Parâmetros`
+- `$* - Todos os parâmetros inseridos [1 - 9]
+- `echo $1 - Imprime o primeiro parâmetro
+### Exemplo de Uso
+`./ExemploParametros.sh curso shell script linux bash`
+> $# = 5
+> $* = curso shell script linux bash
+> $1 = curso
+> $2 = shell
+> $5 = bash
