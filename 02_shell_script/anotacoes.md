@@ -52,3 +52,23 @@
 `exit`
 - Encerrar a execução definindo o código de retorno como 10:
 `exit 10`
+
+## Lendo entrada do usuario (read)
+- `read NOME`
+> Luis Felipe Kunzler
+- `echo $NOME`
+> Luis Felipe Kunzler
+- `read $V1 $V2 $V3`
+> CURSO SHELL SCRIPT
+- `echo $V3 $V2 $V1`
+> SCRIPT SHELL CURSO
+- `read V1 V2`
+> Curso Shell Script # associa "dois campos" a uma variavel
+- `echo $V2`
+> Shell Script
+### Opcoes do read:
+- -p: legenda para o usuario
+- -t: timeout para entrada de dados
+- -a: a variavel é gerada na forma de vetor, iniciando na posicao 0
+- -s: nao ecoa a entrada do terminal
+- -d: define o delimitador que sera utilizado para encerrar a entrada de dados
