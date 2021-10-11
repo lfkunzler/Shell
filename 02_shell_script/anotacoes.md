@@ -52,12 +52,11 @@ echo -n "Exibir data e hora atual: $DATAHORA"
  
 echo ""
 echo "listagem dos alunos"
-#sort /home/felipe/Udemy/Shell/arquivos/alunos2.txt
 sort $ARQALUNOS
 echo ""
 echo "Outra listagem dos alunos"
 sort $DIRALUNOS"/alunos2.txt"
-# Atualiza datahora pra receber segundo
+echo "datahora pra receber segundo"
 DATAHORA=$(date +%H:%M:%S)
 echo "Hora atual: $DATAHORA"
 `
