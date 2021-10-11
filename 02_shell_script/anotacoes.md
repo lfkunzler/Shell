@@ -27,34 +27,14 @@
 7. `################################################`
 
 ## Trabalhando com variaveis
-`1. #!/bin/bash
-2. #################################################
-3. # PrimeiroScript.sh - Script exemplo do curso
-4. #
-5. # Autor: Luis Kunzler (kunzler.luis@gmail.com)
-6. # Data: sex 08/10/2021
-7. # 
-8. # Descrição: Script de exemplo que lê data e hora
-9. # Exemplo de uso: PrimeiroScript.sh
-10. #################################################
+### Exemplos
+`DATAHORA=$(date +%H:%M)`
+`ARQALUNOS="/home/felipe/Udemy/Shell/arquivos/alunos2.txt"`
+`DIRALUNOS="/home/felipe/Udemy/Shell/arquivos"`
+`echo -n "Exibir data e hora atual: $DATAHORA"`
+`DATAHORA=$(date +%H:%M:%S)`
+`echo "Hora atual: $DATAHORA"`
+`sort $DIRALUNOS"/alunos2.txt"`
 
-11. # criacao de variavei datahora
-12. # hora:minuto
-13. DATAHORA=$(date +%H:%M)
-14. ARQALUNOS="/home/felipe/Udemy/Shell/arquivos/alunos2.txt"
-15. DIRALUNOS="/home/felipe/Udemy/Shell/arquivos"
-16. clear
-17. echo "========== Meu Primeiro Script ============"
-18. echo ""
-19. echo -n "Exibir data e hora atual: $DATAHORA"
-
-20. echo ""
-21. echo "listagem dos alunos"
-22. sort $ARQALUNOS
-23. echo ""
-24. echo "Outra listagem dos alunos"
-25. sort $DIRALUNOS"/alunos2.txt"
-26. echo "datahora pra receber segundo"
-27. DATAHORA=$(date +%H:%M:%S)
-28. echo "Hora atual: $DATAHORA"`
+## Codigos de Retorno (Exit Codes)
 
