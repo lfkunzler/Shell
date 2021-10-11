@@ -19,7 +19,7 @@ clear
 echo "========== Meu Primeiro Script ============"
 echo ""
 echo -n "Exibir data e hora atual: $DATAHORA"
- 
+
 echo ""
 echo "listagem dos alunos"
 #sort /home/felipe/Udemy/Shell/arquivos/alunos2.txt
