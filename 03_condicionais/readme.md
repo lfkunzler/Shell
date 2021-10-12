@@ -57,7 +57,7 @@ test <expressão>
 |--------|-----------|
 |   !    | Negation  |
 | -a, && | AND       |
-| -o, || | OR        |
+| -o, \|\| | OR        |
 
 > O comando pode ser omitido pela sintaxe `[]`
 
