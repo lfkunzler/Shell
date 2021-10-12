@@ -45,25 +45,25 @@ test <expressão>
 | -w    | has permission of writing   |
 | -x    | has permission of executing |
 | -s    | size greater than 0         |
-
+> O comando pode ser omitido pela sintaxe `[]`
 ### Exemplos
 ``` shell
-test 50 -gt 100
+test 50 -gt 100 # [50 -gt 100]
 ```
 > false
 ``` shell
 VAR1=12
-test $VAR1 -eq 12
+test $VAR1 -eq 12 # [$VAR1 -eq 12]
 ```
 > true
 ``` shell
-test -f /tmp/file.txt
+test -f /tmp/file.txt # [-f /tmp/file.txt]
 ```
 > true
 ``` shell
 VAR1="hello"
 VAR2="world"
-test $VAR1 = $VAR2
+test $VAR1 = $VAR2 # [$VAR1 = $VAR2]
 ```
 > false
 
