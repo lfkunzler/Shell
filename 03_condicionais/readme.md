@@ -45,6 +45,13 @@ test <expressão>
 | -w    | has permission of writing   |
 | -x    | has permission of executing |
 | -s    | size greater than 0         |
+> Operadores lógicos
+| Opção | Descrição |
+|-------|-----------|
+| !     | Negation  |
+| -a    | AND       |
+| -o    | OR        |
+
 > O comando pode ser omitido pela sintaxe `[]`
 ### Exemplos
 ``` shell
