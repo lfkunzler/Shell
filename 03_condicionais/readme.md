@@ -1,6 +1,6 @@
 # Capitulo de Condicionais
 ## IF
-```
+``` shell
 if <comando-condicao>
 then
   comando_1
