@@ -21,6 +21,7 @@ test <expressão>
 ```
 ### Test
 > Para valores numéricos
+
 | Opção | Descrição             |
 |-------|-----------------------|
 | -eq   | equal                 |
@@ -31,6 +32,7 @@ test <expressão>
 | -le   | lower or equal than   |
 
 > Para strings
+
 | Opção | Descrição                  |
 |-------|----------------------------|
 | =     | string 1 equal to string 2 |
@@ -39,6 +41,7 @@ test <expressão>
 | -z    | string is null             |
 
 > Arquivos
+
 | Opção | Descrição                   |
 |-------|-----------------------------|
 | -f    | is a file                   |
@@ -49,6 +52,7 @@ test <expressão>
 | -s    | size greater than 0         |
 
 > Operadores lógicos
+
 | Opção | Descrição |
 |-------|-----------|
 | !     | Negation  |
@@ -56,6 +60,7 @@ test <expressão>
 | -o    | OR        |
 
 > O comando pode ser omitido pela sintaxe `[]`
+
 ### Exemplos
 ``` shell
 test 50 -gt 100 # [50 -gt 100]
