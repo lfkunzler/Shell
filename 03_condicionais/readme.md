@@ -20,7 +20,8 @@ fi
 test <expressão>
 ```
 ### Test
-| opção | Descrição             |
+> Para valores numéricos
+| Opção | Descrição             |
 |-------|-----------------------|
 | -eq   | equal                 |
 | -ne   | not equal             |
@@ -28,5 +29,41 @@ test <expressão>
 | -ge   | greater or equal than |
 | -lt   | lower than            |
 | -le   | lower or equal than   |
+> Para strings
+| Opção | Descrição                  |
+|-------|----------------------------|
+| =     | string 1 equal to string 2 |
+| !=    | not equal                  |
+| -n    | string isn't null          |
+| -z    | string is null             |
+> Arquivos
+| Opção | Descrição                   |
+|-------|-----------------------------|
+| -f    | is a file                   |
+| -d    | is a directory              |
+| -r    | has permission of reading   |
+| -w    | has permission of writing   |
+| -x    | has permission of executing |
+| -s    | size greater than 0         |
 
+### Exemplos
+``` shell
+test 50 -gt 100
+```
+> false
+``` shell
+VAR1=12
+test $VAR1 -eq 12
+```
+> true
+``` shell
+test -f /tmp/file.txt
+```
+> true
+``` shell
+VAR1="hello"
+VAR2="world"
+test $VAR1 = $VAR2
+```
+> false
 
