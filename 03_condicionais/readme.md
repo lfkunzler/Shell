@@ -29,6 +29,7 @@ test <expressão>
 | -ge   | greater or equal than |
 | -lt   | lower than            |
 | -le   | lower or equal than   |
+
 > Para strings
 | Opção | Descrição                  |
 |-------|----------------------------|
@@ -36,6 +37,7 @@ test <expressão>
 | !=    | not equal                  |
 | -n    | string isn't null          |
 | -z    | string is null             |
+
 > Arquivos
 | Opção | Descrição                   |
 |-------|-----------------------------|
@@ -45,6 +47,7 @@ test <expressão>
 | -w    | has permission of writing   |
 | -x    | has permission of executing |
 | -s    | size greater than 0         |
+
 > Operadores lógicos
 | Opção | Descrição |
 |-------|-----------|
