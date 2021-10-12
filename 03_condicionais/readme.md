@@ -87,9 +87,51 @@ test $VAR1 = $VAR2 # [$VAR1 = $VAR2]
 case $VAR in
 value_1)
   comando_1
+  ;; # break
 value_2)
   comando_2
+  ;; # break
 *) # default
   comando_3
+  ;;
+esac
+```
+
+### Exemplos de case
+``` shell
+case $OPTION in
+1)
+  echo "creating..."
+  ;;
+2)
+  echo "editing..."
+  ;;
+3)
+  echo "deleting..."
+  ;;
+q)
+  echo "saving..."
+  exit 0
+*) # default
+  echo "Not a option"
+  exit 2
+  ;;
+esac
+```
+
+``` shell
+case $CARACTER in
+[0-9])
+  echo "It's a number"
+  ;;
+[A-Z])
+  echo "It's a capital letter"
+  ;;
+[a-z])
+  echo "It's a small letter"
+  ;;
+*) # default
+  echo "It's a symbol"
+  ;;
 esac
 ```
