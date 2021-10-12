@@ -162,11 +162,11 @@ O comando `touch` serve para atualizar a data de edição de um arquivo
 
 ## expr
 > expressoes matematicas (inteiras): + - / * %, logicas...
-  lembrar de proteger o * com: '\'
+  lembrar de proteger o * com: \\
 
 Seu uso padrão é o `$(expr 2 + 4) # == 6`
 O uso do comando de expressão também pode acomular mais que um valor, sendo:
-`$(expr 10 + 2 * 6 / 3) # == 14, pois 10 + ((2*6)/3)`
+`$(expr 10 + 2 * 6 / 3) # == 14`, pois 10 + ((2\*6)/3)
 A expressão acima também pode ser descrita por: `$(expr 10 + 6 / 3 \* 2) # == 10 + 2\*2`
 
 ## bc
