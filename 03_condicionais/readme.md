@@ -4,9 +4,11 @@
 if <comando-condicao>
 then
   comando_1
+elif <comando-condicao>
+then
   comando_2
-    ...
-  comando_n
+else
+  comando_3
 fi
 ```
 
