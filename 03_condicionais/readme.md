@@ -1,4 +1,23 @@
 # Capitulo de Condicionais
+## Revisão Operadores Lógicos
+``` shell 
+&&:  O comando depois do &&  é executado somente se o comando anterior ao && retornar um código de saída zero. Ele é o AND que possuímos nas linguagens de programação.
+
+&: O shell executa o programa que termina com o & no background, criando o job.
+
+(Apesar da sintaxe ser parecida, o & e && possuem funções completamente diferentes no shell.)
+
+-a: Possui  a mesma função do && em uma estrutura lógica, porém é usado de forma restrita ao test ou [ ].
+
+||: O comando que é executado depois do || é executado, somente se o comando anterior ao || retornar um código de saída que não seja zero (erro). Ele é o nosso operador OR nas linguagens.
+
+|: é uma "pipe". Suponhamos que temos a expressão: comando1 | comando2 através do "pipe" o output padrão gerado pelo comando1 é jogado no input padrão do comando2, fazendo com que o conteúdo gerado por um seja repassado para o próximo.
+
+(Note que o | e || não possuem nenhum vínculo, são duas coisas totalmente diferentes.)
+
+-o: Possui  a mesma função do || em uma estrutura lógica, porém é usado de forma restrita ao test ou [ ].
+
+```
 ## IF
 ``` shell
 if <comando-condicao>
