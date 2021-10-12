@@ -12,8 +12,8 @@ echo -e "USUARIO\t\tUID\t\tDIR HOME\t\tNOME"
 
 for i in $(cat /etc/passwd)
 do
-    USERID=$(echo | cut -d":" -f3)
-    if [ $USERID -ge $MIN_UID -a $USERID -le $MAX_UID ]
+    USERID=$(echo $i | cut -d":" -f3)
+    if [ $USERID -ge $MIN_UID ] && [ $USERID -le $MAX_UID ]
     then
         USER=$(echo $i | cut -d: -f1)
         HOMEDIR=$(echo $i | cut -d: -f6)
@@ -23,4 +23,3 @@ do
 done
 
 IFS=$OLDIFS
-
