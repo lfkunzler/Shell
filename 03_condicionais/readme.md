@@ -82,3 +82,14 @@ test $VAR1 = $VAR2 # [$VAR1 = $VAR2]
 ```
 > false
 
+## Case
+``` shell
+case $VAR in
+value_1)
+  comando_1
+value_2)
+  comando_2
+*) # default
+  comando_3
+esac
+```
