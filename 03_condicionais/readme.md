@@ -53,11 +53,11 @@ test <expressão>
 
 > Operadores lógicos
 
-| Opção | Descrição |
-|-------|-----------|
-| !     | Negation  |
-| -a    | AND       |
-| -o    | OR        |
+| Opção  | Descrição |
+|--------|-----------|
+|   !    | Negation  |
+| -a, && | AND       |
+| -o, || | OR        |
 
 > O comando pode ser omitido pela sintaxe `[]`
 

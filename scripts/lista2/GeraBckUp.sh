@@ -13,7 +13,8 @@ fi
 
 DAYS7=$(find $DIRDEST -ctime -7 -name backup_home\*tgz)
 
-if [ $DAYS7 ] # variavel e nula?
+# protegemos a variavel DAYS7 com "" devido ao retorno de alguns caracteres
+if [ "$DAYS7" ] # variavel nao nula?
 then
   echo "Já foi gerado um backup de $DIREST nos ultimos 7 dias"
   read -p "Deseja continuar? (N/s):" OPCAO
@@ -37,7 +38,7 @@ then
 fi
 
 echo
-echo "O backup de nome $ARQ foi criado em $DIRDEST"
+echo "O backup de nome \"$ARQ\" foi criado em $DIRDEST"
 echo
 echo "Backup Concluido!"
 
