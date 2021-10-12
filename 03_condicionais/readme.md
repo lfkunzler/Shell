@@ -1,9 +1,12 @@
 # Capitulo de Condicionais
 ## IF
-- if <comando-condicao>
--  then
--     comando1
--     comando2
--     ...
--     comandon
--  fi
+```
+if <comando-condicao>
+then
+  comando_1
+  comando_2
+    ...
+  comando_n
+fi
+```
+
