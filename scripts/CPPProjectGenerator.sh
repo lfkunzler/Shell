@@ -31,7 +31,6 @@ echo "{"						>> $FOLDER/$2/src/main.cpp
 echo "	cout << \"Hello\n\";"	>> $FOLDER/$2/src/main.cpp
 echo "	return 0;"			 	>> $FOLDER/$2/src/main.cpp
 echo "}" 						>> $FOLDER/$2/src/main.cpp
-exit 
 
 echo 'CXX      := -g++' >> $FOLDER/$2/Makefile
 echo 'CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror' >> $FOLDER/$2/Makefile
