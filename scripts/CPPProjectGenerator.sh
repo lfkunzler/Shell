@@ -3,6 +3,7 @@
 if [ $# -ne 2 ] 
 then 
   echo "Uso: $0 folder project_name"
+  exit
 fi
 
 FOLDER=$1
@@ -20,17 +21,31 @@ mkdir $FOLDER/$2/src/modulo
 touch $FOLDER/$2/Makefile
 touch $FOLDER/$2/src/main.cpp
 touch $FOLDER/$2/inc/main.hpp
-touch $FOLDER/$2/src/modulo/renomear.cpp
-touch $FOLDER/$2/inc/modulo/renomear.hpp
+touch $FOLDER/$2/src/modulo/rename.cpp
+touch $FOLDER/$2/inc/modulo/rename.hpp
 
-echo "#include <iostream>"  	>> $FOLDER/$2/src/main.cpp
-echo "using namespace std;" 	>> $FOLDER/$2/src/main.cpp
-echo ""						 	>> $FOLDER/$2/src/main.cpp
+echo "#include <iostream>"		>> $FOLDER/$2/src/main.cpp
+echo "using namespace std;"		>> $FOLDER/$2/src/main.cpp
+echo ""							>> $FOLDER/$2/src/main.cpp
 echo "int main(void)"			>> $FOLDER/$2/src/main.cpp
 echo "{"						>> $FOLDER/$2/src/main.cpp
 echo "	cout << \"Hello\n\";"	>> $FOLDER/$2/src/main.cpp
-echo "	return 0;"			 	>> $FOLDER/$2/src/main.cpp
-echo "}" 						>> $FOLDER/$2/src/main.cpp
+echo "	return 0;"				>> $FOLDER/$2/src/main.cpp
+echo "}"						>> $FOLDER/$2/src/main.cpp
+
+echo "#ifndef RENAME_HPP"		>> $FOLDER/$2/inc/modulo/rename.hpp
+echo "#define RENAME_HPP"		>> $FOLDER/$2/inc/modulo/rename.hpp
+echo ""							>> $FOLDER/$2/inc/modulo/rename.hpp
+echo "class Rename"				>> $FOLDER/$2/inc/modulo/rename.hpp
+echo "{"						>> $FOLDER/$2/inc/modulo/rename.hpp
+echo -e "\tpublic:"				>> $FOLDER/$2/inc/modulo/rename.hpp
+echo ""							>> $FOLDER/$2/inc/modulo/rename.hpp
+echo -e "\tprivate:"			>> $FOLDER/$2/inc/modulo/rename.hpp
+echo ""							>> $FOLDER/$2/inc/modulo/rename.hpp
+echo -e "\tprotected:"			>> $FOLDER/$2/inc/modulo/rename.hpp
+echo ""							>> $FOLDER/$2/inc/modulo/rename.hpp
+echo "};"						>> $FOLDER/$2/inc/modulo/rename.hpp
+echo "#endif // RENAME_HPP"		>> $FOLDER/$2/inc/modulo/rename.hpp
 
 echo 'CXX      := -g++' >> $FOLDER/$2/Makefile
 echo 'CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror' >> $FOLDER/$2/Makefile
@@ -79,4 +94,3 @@ echo '	@echo "[*] Object dir:      ${OBJ_DIR}     "' >> $FOLDER/$2/Makefile
 echo '	@echo "[*] Sources:         ${SRC}         "' >> $FOLDER/$2/Makefile
 echo '	@echo "[*] Objects:         ${OBJECTS}     "' >> $FOLDER/$2/Makefile
 echo '	@echo "[*] Dependencies:    ${DEPENDENCIES}"' >> $FOLDER/$2/Makefile
-
