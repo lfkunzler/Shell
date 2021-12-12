@@ -55,7 +55,10 @@ echo 'OBJ_DIR  := $(BUILD)/objects' >> $FOLDER/$2/Makefile
 echo 'APP_DIR  := $(BUILD)/apps' >> $FOLDER/$2/Makefile
 echo "TARGET   := $PROJECT" >> $FOLDER/$2/Makefile
 echo 'INCLUDE  := -Iinc/' >> $FOLDER/$2/Makefile
-echo 'SRC      := $(wildcard src/*.cpp) $(wildcard src/modulo/*.cpp' >> $FOLDER/$2/Makefile
+echo 'SRC      :=					\'	>> $FOLDER/$2/Makefile
+echo '$(wildcard src/module1/*.cpp)	\'	>> $FOLDER/$2/Makefile
+echo '$(wildcard src/module2/*.cpp)	\'	>> $FOLDER/$2/Makefile
+echo '$(wildcard src/*.cpp)' 			>> $FOLDER/$2/Makefile
 echo '' >> $FOLDER/$2/Makefile
 echo 'OBJECTS  := $(SRC:%.cpp=$(OBJ_DIR)/%.o)' >> $FOLDER/$2/Makefile
 echo 'DEPENDENCIES := $(OBJECTS:.o=.d)' >> $FOLDER/$2/Makefile
@@ -70,7 +73,7 @@ echo '$(APP_DIR)/$(TARGET): $(OBJECTS)' >> $FOLDER/$2/Makefile
 echo '	@mkdir -p $(@D)' >> $FOLDER/$2/Makefile
 echo '	$(CXX) $(CXXFLAGS) -o $(APP_DIR)/$(TARGET) $^ $(LDFLAGS)' >> $FOLDER/$2/Makefile
 echo '' >> $FOLDER/$2/Makefile
-echo '-inc $(DEPENDENCIES)' >> $FOLDER/$2/Makefile
+echo '-include $(DEPENDENCIES)' >> $FOLDER/$2/Makefile
 echo '' >> $FOLDER/$2/Makefile
 echo '.PHONY: all build clean debug release info' >> $FOLDER/$2/Makefile
 echo '' >> $FOLDER/$2/Makefile
